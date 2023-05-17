@@ -30,7 +30,7 @@ class Planck:
         plt.ylabel(r"Radiance (J/$m^{2}$/sr/$\lambda$)")
         plt.xlabel(r"Wavelength (nm)")
         plt.title(r"Planck Spectra of Various Stars")
-        plt.legend()
+        #plt.legend()
 
     def wien(self):
 
@@ -50,4 +50,9 @@ for s in stars:
 
     s.plot()
 
+
+
+plt.axvline(400,label='Ultraviolet',linestyle=':',color='b')
+plt.axvline(700,label='Infrared',linestyle=':',color='r')
+plt.legend()
 plt.show()
